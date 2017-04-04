@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { GenerateRutComponent } from './generate-rut/generate-rut.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GenerateRutComponent
   ],
   imports: [
     BrowserModule,
