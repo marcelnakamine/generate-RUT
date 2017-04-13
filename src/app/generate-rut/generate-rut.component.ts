@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+//import { Clipboard } from 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min';
 
 @Component({
   selector: 'app-generate-rut',
   templateUrl: './generate-rut.component.html',
   styleUrls: ['./generate-rut.component.css']
 })
-export class GenerateRutComponent {
+export class GenerateRutComponent implements OnInit {
+
+  text1: string;
+  text2: string;
 
 	public generatedRUT;
+
+	ngOnInit() {
+		//new Clipboard('.btn');
+	}
 
 	generateRUTButton () {
 		this.generatedRUT = this.getRUT();

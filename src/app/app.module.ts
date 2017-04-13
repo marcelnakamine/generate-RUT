@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { GenerateRutComponent } from './generate-rut/generate-rut.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GenerateRutComponent } from './generate-rut/generate-rut.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
