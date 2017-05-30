@@ -25,6 +25,14 @@ export class GenerateRutComponent implements OnInit {
 		return Math.floor(Math.random()*9);
 	}
 
+  getDigit(digit) {
+    switch(digit) {
+      case 10: return 'K';
+      case 11: return 0;
+      default: return digit;
+    }
+  }
+
 	getRUT () {
 		var coefs = [3, 2, 7, 6, 5, 4, 3, 2];
 		var digits = [];
@@ -38,7 +46,7 @@ export class GenerateRutComponent implements OnInit {
 		}
 
 		digits.push("-");
-		digits.push(11-(total%11));
+		digits.push(this.getDigit(11-(total%11)));
 		return digits.join('');
 	}
 
